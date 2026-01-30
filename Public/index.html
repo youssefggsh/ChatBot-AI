@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Ollama Web Chat</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <div class="title">OllamaAI</div>
+        <button id="newChat" class="iconBtn" title="New chat">＋</button>
+      </div>
+
+      <div class="searchWrap">
+        <input id="search" placeholder="Search chats…"/>
+      </div>
+
+      <div id="chatList" class="chatList"></div>
+      <div class="sidebarFoot">
+        <span id="health" class="health">● Checking…</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div class="chatTitle" id="chatTitle">Chat</div>
+        <div class="topbarRight">
+          <button id="stopBtn" class="btn danger" disabled>Stop</button>
+        </div>
+      </div>
+
+      <div id="messages" class="messages"></div>
+
+      <div class="composer">
+        <textarea id="input" rows="1" placeholder="Message…"></textarea>
+        <button id="sendBtn" class="btn primary">Send</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
